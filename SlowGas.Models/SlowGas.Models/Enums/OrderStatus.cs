@@ -2,6 +2,7 @@
 {
     public enum OrderStatus
     {
+        None = 0,       
         New = 1,
         Processing = 2,
         Approved = 3,

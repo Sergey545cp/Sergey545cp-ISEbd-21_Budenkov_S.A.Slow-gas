@@ -69,6 +69,21 @@ namespace SlowGas.Tests.DataModelsTests
         }
 
         [Test]
+        public void Motor_TypeNone_ShouldThrowException()
+        {
+            var motor = new Motor
+            {
+                Id = Guid.NewGuid().ToString(),
+                ModelCode = "V8-001",
+                Name = "Мотор V8",
+                Type = MotorType.None,
+                Price = 250000m
+            };
+
+            Assert.That(() => motor.Validate(), Throws.TypeOf<ValidationException>());
+        }
+
+        [Test]
         public void Motor_ZeroPrice_ShouldThrowException()
         {
             var motor = new Motor

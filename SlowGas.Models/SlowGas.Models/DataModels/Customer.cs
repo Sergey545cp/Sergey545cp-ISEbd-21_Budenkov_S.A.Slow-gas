@@ -19,8 +19,17 @@ namespace SlowGas.Models.DataModels
             if (string.IsNullOrWhiteSpace(Name))
                 throw new ValidationException("Имя не может быть пустым");
 
+            if (string.IsNullOrWhiteSpace(Phone))
+                throw new ValidationException("Телефон не может быть пустым");
+
             if (!Phone.IsValidPhone())
-                throw new ValidationException("Телефон имеет неверный формат");
+                throw new ValidationException("Телефон имеет неверный формат. Используй формат: +7XXXXXXXXXX или 8XXXXXXXXXX");
+
+            if (string.IsNullOrWhiteSpace(Email))
+                throw new ValidationException("Email не может быть пустым");
+
+            if (!Email.IsValidEmail())
+                throw new ValidationException("Email имеет неверный формат");
         }
     }
 }

@@ -22,6 +22,10 @@ namespace SlowGas.Models.DataModels
 
             if (Amount <= 0)
                 throw new ValidationException("Сумма должна быть больше 0");
+
+            // Добавь проверку статуса
+            if (Status == PaymentStatus.None)
+                throw new ValidationException("Статус не может быть None");
         }
     }
 }

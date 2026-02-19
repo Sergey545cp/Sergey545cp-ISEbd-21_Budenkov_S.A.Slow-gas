@@ -19,5 +19,12 @@ namespace SlowGas.Models.Extensions
             if (IsEmpty(phone)) return false;
             return Regex.IsMatch(phone, @"^(\+7|8)[0-9]{10}$");
         }
+
+        // ДОБАВЬ ЭТОТ МЕТОД
+        public static bool IsValidEmail(this string email)
+        {
+            if (IsEmpty(email)) return false;
+            return Regex.IsMatch(email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$");
+        }
     }
 }
