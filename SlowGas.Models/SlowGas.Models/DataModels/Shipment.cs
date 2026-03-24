@@ -11,6 +11,7 @@ namespace SlowGas.Models.DataModels
         public string RequestId { get; set; }
         public DateTime Date { get; set; }
         public OrderStatus Status { get; set; }
+        public int ShippingCost { get; set; }
 
         public void Validate()
         {

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="NUnit" Version="4.0.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
@@ -20,6 +21,8 @@
     <!-- ИСПРАВЛЕНО: путь к проекту -->
     <ProjectReference Include="..\SlowGas.Models\SlowGas.Models.csproj" />
     <ProjectReference Include="..\SlowGas.BusinessLogic\SlowGas.BusinessLogic.csproj" />
+    <ProjectReference Include="..\SlowGas.Database\SlowGas.Database.csproj" />
+	
   </ItemGroup>
 
 </Project>
