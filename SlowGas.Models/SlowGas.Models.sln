@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlowGas.Tests", "SlowGas.Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlowGas.BusinessLogic", "SlowGas.BusinessLogic\SlowGas.BusinessLogic.csproj", "{EC413876-0415-4720-A6E7-74F235BE11BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowGas.Database", "SlowGas.Database\SlowGas.Database.csproj", "{FA90A6D3-D9D3-4498-9088-E80EFFDFC257}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlowGas.Database", "SlowGas.Database\SlowGas.Database.csproj", "{FA90A6D3-D9D3-4498-9088-E80EFFDFC257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlowGas.WebApi", "SlowGas.WebApi\SlowGas.WebApi.csproj", "{C3EB30DA-167E-439A-B0AD-47C61C6B79E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FA90A6D3-D9D3-4498-9088-E80EFFDFC257}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA90A6D3-D9D3-4498-9088-E80EFFDFC257}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA90A6D3-D9D3-4498-9088-E80EFFDFC257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3EB30DA-167E-439A-B0AD-47C61C6B79E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3EB30DA-167E-439A-B0AD-47C61C6B79E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3EB30DA-167E-439A-B0AD-47C61C6B79E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3EB30DA-167E-439A-B0AD-47C61C6B79E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

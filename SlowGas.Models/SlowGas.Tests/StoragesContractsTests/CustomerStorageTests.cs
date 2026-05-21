@@ -42,7 +42,7 @@ namespace SlowGas.Tests.StoragesContractsTests
             {
                 Id = Guid.NewGuid().ToString(),
                 Name = "ООО Тест",
-                Phone = "+79161234567",  // 12 символов, влезает в 50
+                Phone = "+79161234567",  
                 Email = "test@test.ru"
             };
             _storage.AddElement(customer);

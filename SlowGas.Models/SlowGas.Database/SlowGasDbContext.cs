@@ -28,6 +28,7 @@ namespace SlowGas.Database
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // ВАЖНО: Проверяем, что конфигурация ещё не установлена
             if (!optionsBuilder.IsConfigured && _configuration != null)
             {
                 optionsBuilder.UseNpgsql(_configuration.ConnectionString);
@@ -35,6 +36,7 @@ namespace SlowGas.Database
             base.OnConfiguring(optionsBuilder);
         }
 
+        // Остальной код OnModelCreating...
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
