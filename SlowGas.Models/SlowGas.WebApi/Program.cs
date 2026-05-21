@@ -9,6 +9,16 @@ using SlowGas.Models.Infrastructure;
 using SlowGas.Models.StoragesContracts;
 using SlowGas.WebApi.Adapters;
 using SlowGas.WebApi.Infrastructure;
+using SlowGas.BusinessLogic.Implementations;
+using SlowGas.Database.Implementations;
+using SlowGas.Models.BusinessLogicsContracts;
+using SlowGas.Models.StoragesContracts;
+using SlowGas.Models.Infrastructure;
+using SlowGas.WebApi.Infrastructure;
+using SlowGas.BusinessLogic.Implementations;
+using SlowGas.Models.BusinessLogicsContracts;
+using SlowGas.Models.Infrastructure;
+using SlowGas.WebApi.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -52,6 +62,14 @@ builder.Services.AddScoped<IMotorAdapter, MotorAdapter>();
 builder.Services.AddScoped<IRequestAdapter, RequestAdapter>();
 builder.Services.AddScoped<IShipmentAdapter, ShipmentAdapter>();
 builder.Services.AddScoped<IInvoiceAdapter, InvoiceAdapter>();
+
+builder.Services.AddScoped<IPostStorageContract, PostStorage>();
+builder.Services.AddScoped<ISalaryStorageContract, SalaryStorage>();
+builder.Services.AddScoped<ISaleStorageContract, SaleStorage>();
+builder.Services.AddScoped<ISalaryBusinessLogic, SalaryBusinessLogic>();
+builder.Services.AddScoped<IWorkerStorageContract, WorkerStorage>();
+builder.Services.AddSingleton<IConfigurationSalary, ConfigurationSalary>();
+builder.Services.AddScoped<ISalaryBusinessLogic, SalaryBusinessLogic>();
 
 var app = builder.Build();
 
